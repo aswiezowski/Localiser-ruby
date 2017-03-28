@@ -22,6 +22,7 @@ module Localiser
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.debug_exception_response_format = :default
     config.api_only = true
     config.debug_exception_response_format = :api
   end

@@ -18,10 +18,10 @@ class TravelingSalesmanSolverTest  < ActiveSupport::TestCase
       solver = TravelingSalesmanSolver.new
       distanceCalculator = DistanceCalculator.new
       loc1 = Location.new(latitude: 50.061424, longitude: 19.937340, description: 'Main Square')
-      loc2 = Location.new(latitude: 50.054877, longitude: 19.893238, description: 'Koscioszko Mound')
+      loc2 = Location.new(latitude: 50.054640, longitude: 19.893508, description: 'Koscioszko Mound')
       loc3 = Location.new(latitude: 50.054877, longitude: 19.893238, description: 'Pilsudzki Mound')
       loc4 = Location.new(latitude: 50.037975, longitude: 19.958465, description: 'Krak Mound')
-      loc5 = Location.new(latitude: 50.054877, longitude: 19.893238, description: 'Wanda Mound')
+      loc5 = Location.new(latitude: 50.070075, longitude: 20.068145, description: 'Wanda Mound')
       initialLocations = [loc1, loc2, loc3, loc4, loc5]
 
       path = solver.findShortestPath(loc3, initialLocations)

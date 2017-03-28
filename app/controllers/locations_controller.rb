@@ -9,12 +9,7 @@ class LocationsController < ApplicationController
     @location = Location.new(params.require(:location).permit(:latitude, :longitude, :description))
     rand_bytes = Random.new.bytes(6)
     @location.code =  Base64.urlsafe_encode64(rand_bytes)
-    if @location.save
-      render json: location_to_json(@location)
-    else
-      render json: @location.errors, status: :bad_request
-    end
-
+    @location.save
   end
 
   def show
